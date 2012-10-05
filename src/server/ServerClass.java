@@ -30,7 +30,6 @@ public class ServerClass {
 	public static  void sendMessage(String message){
 		for(ServerThread st : list){
 			st.pw.println(message);
-			System.out.println(">>"+message);
 		}
 	}
 	public static void main (String[] args){

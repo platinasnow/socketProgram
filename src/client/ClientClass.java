@@ -27,7 +27,7 @@ public class ClientClass extends JFrame implements ActionListener{
 	JFrame frame = new JFrame();
 	JTextArea textArea = new JTextArea();
 	JTextField textField = new JTextField();
-	JScrollPane scrollPane = new JScrollPane();
+	JScrollPane scrollPane = new JScrollPane(textArea);
 	
 	
 	public ClientClass() {
@@ -47,6 +47,8 @@ public class ClientClass extends JFrame implements ActionListener{
 		
 		String id = JOptionPane.showInputDialog(pane,"ID¸¦ ÀÔ·Â :");
 		pw.println(id);
+		
+		new MessageReceive().start();
 	}
 	
 	public void setting(){
